@@ -1,0 +1,13 @@
+img {
+  height: 150px;
+  width: 150px;
+}
+
+.bloc {
+  display: flex;
+  margin: 20px 0px;
+  box-sizing: border-box;
+}
+.mnImage {
+  flex-direction: row;
+}

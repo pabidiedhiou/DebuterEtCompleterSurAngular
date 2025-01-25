@@ -1,0 +1,21 @@
+<div class="bloc">
+  <div class="mnImage">
+    <h1 [ngClass]="{ active: text_bouton === 'Unliker' }">
+      Titre: {{ facesnaps.title }}
+    </h1>
+    <p>Description: {{ facesnaps.description }}</p>
+    <h4>
+      Date Création:
+      {{ facesnaps.createdDate | date : "le dd MMM yyy à HH:mm" }}
+    </h4>
+    <img [src]="facesnaps.imageUrl" [alt]="facesnaps.title" />
+    <p *ngIf="facesnaps.snaps">Snaps: {{ facesnaps.snaps }}</p>
+    <button (click)="showSnap()">Voir le FaceSnap</button><br /><br />
+    <button
+      [ngStyle]="{ color: 'rgb(0, ' + facesnaps.snaps + ',0 )' }"
+      (click)="onSnap()"
+    >
+      {{ text_bouton }}
+    </button>
+  </div>
+</div>
