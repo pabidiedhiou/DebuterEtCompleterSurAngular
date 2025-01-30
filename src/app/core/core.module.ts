@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EnteteComponent } from './components/entete/entete.component';
-
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -9,7 +9,11 @@ import { EnteteComponent } from './components/entete/entete.component';
     EnteteComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
+  ],
+  exports:[
+    EnteteComponent
   ]
 })
 export class CoreModule { }
