@@ -8,6 +8,7 @@ import * as fr from '@angular/common/locales/fr';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { MaterialModule } from './material/material.module';
+import { AccueilModule } from './accueil/accueil.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -16,7 +17,8 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
-    MaterialModule
+    MaterialModule,
+    AccueilModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent],

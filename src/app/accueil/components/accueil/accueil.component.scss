@@ -1,0 +1,24 @@
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3em;
+    color: #3f51b5;  /* Couleur de ton thème primaire */
+  }
+  
+  p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+  }
+  
