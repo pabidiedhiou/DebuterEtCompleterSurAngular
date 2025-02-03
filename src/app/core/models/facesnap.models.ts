@@ -1,5 +1,6 @@
 export class FaceSnap {
-    id!: number;
+    constructor(){}
+    _id!: number;
     userId!: number;
     snaps!: number;
     title!: string;
