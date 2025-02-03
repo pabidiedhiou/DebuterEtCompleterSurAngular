@@ -10,7 +10,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
- /* signup(user: User): Observable<Message>{
-    this.http.post<string>('http://localhost:3000/api/auth/signup', user)
-  }*/
+  signup(user: User): Observable<Message>{
+   return this.http.post<Message>('http://localhost:3000/api/auth/signup', user)
+  }
 }
