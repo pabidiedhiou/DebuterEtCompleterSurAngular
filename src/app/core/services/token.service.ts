@@ -12,8 +12,6 @@ export class TokenService {
   }
 
   getToken(): string | null{
-    const token = localStorage.getItem("token")
-    console.log(`Le token est : ${token}`)
-    return token
+    return localStorage.getItem("token")
   }
 }

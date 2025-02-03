@@ -28,7 +28,7 @@ onLogin(){
   .subscribe((data) => {
       this.tokenservice.saveToken(data.token)
       this.tokenservice.getToken()
-      console.log(data.token)
+      this.router.navigateByUrl("facesnap")
     }
   )
 
