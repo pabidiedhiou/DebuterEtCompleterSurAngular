@@ -5,6 +5,7 @@ import { MaterialModule } from '../material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpInterceptorProviders } from './interceptors';
 @NgModule({
   declarations: [
     EnteteComponent
@@ -18,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   exports:[
     EnteteComponent
-  ]
+  ],
+  providers : [HttpInterceptorProviders]
 })
 export class CoreModule { }
