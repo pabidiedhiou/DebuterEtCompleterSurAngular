@@ -1,0 +1,20 @@
+.full-width {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  /* Ajout d'un padding et d'une marge autour du formulaire */
+form {
+    padding: 20px;  /* Espacement intérieur */
+    margin: 20px auto;  /* Espacement extérieur, centré horizontalement */
+    max-width: 400px;  /* Limite la largeur du formulaire */
+    border: 1px solid #ddd;  /* Optionnel, pour un cadre autour du formulaire */
+    border-radius: 8px;  /* Optionnel, pour arrondir les coins */
+    background-color: #f9f9f9;  /* Optionnel, pour une couleur de fond douce */
+  }
+  
+  /* Marge autour des champs du formulaire */
+  mat-form-field {
+    width: 100%;  /* Les champs prennent toute la largeur du formulaire */
+    margin-bottom: 15px;  /* Ajoute de l'espace entre les champs */
+  }

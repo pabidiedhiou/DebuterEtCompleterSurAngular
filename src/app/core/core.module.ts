@@ -4,6 +4,7 @@ import { EnteteComponent } from './components/entete/entete.component';
 import { MaterialModule } from '../material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     EnteteComponent
@@ -13,6 +14,7 @@ import { RouterModule } from '@angular/router';
     MaterialModule,
     HttpClientModule,
     RouterModule,
+    ReactiveFormsModule,
   ],
   exports:[
     EnteteComponent

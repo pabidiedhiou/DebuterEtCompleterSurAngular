@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { MaterialModule } from './material/material.module';
 import { AccueilModule } from './accueil/accueil.module';
+import { AuthentificationModule } from './authentification/authentification.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -18,7 +19,8 @@ import { AccueilModule } from './accueil/accueil.module';
     HttpClientModule,
     CoreModule,
     MaterialModule,
-    AccueilModule
+    AccueilModule,
+    AuthentificationModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent],

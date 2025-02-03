@@ -1,1 +1,15 @@
-<p>inscription works!</p>
+<form [formGroup] = "emailform">
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName = "email"/>
+      </mat-form-field>
+    
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput  type="password" formControlName = "password" />
+      </mat-form-field>
+    
+      <button mat-raised-button color="primary" type="submit" (click) = "onSubmitForm()">
+        S'inscrire
+      </button>
+</form>
