@@ -19,5 +19,6 @@ ngOnInit(): void {
 onSubmitForm(){
   this.authservice.signup(this.emailform.value)
   .subscribe((data) => console.log(`data: ${data.message}`))
+
 }
 }

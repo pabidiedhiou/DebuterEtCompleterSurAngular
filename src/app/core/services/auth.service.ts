@@ -12,10 +12,12 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   signup(user: User): Observable<Message>{
+
    return this.http.post<Message>('http://localhost:3000/api/auth/signup', user)
   }
 
   login(user: User): Observable<Itoken>{
    return this.http.post<Itoken>('http://localhost:3000/api/auth/login', user)
+
   }
 }
