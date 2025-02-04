@@ -1,16 +1,18 @@
-<mat-card class="post-card" *ngIf="facesnaps$ | async as facesnap">
-    <img mat-card-image [src] = " "  >
+<mat-card class="post-card">
+    <img mat-card-image [src] = "facesnap.imageUrl" [alt]="facesnap.title" >
     <mat-card-header>
-      <mat-card-title> facesnap.title </mat-card-title>
-      <mat-card-subtitle>facesnap.location </mat-card-subtitle>
+      <mat-card-title> {{facesnap.title}} </mat-card-title>
+      <mat-card-subtitle>{{facesnap.location}} </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p>facesnap.description</p>
+      <p>{{facesnap.description}}</p>
     </mat-card-content>
     <mat-card-actions align="end">
       <button mat-icon-button color="primary">
-        <mat-icon>favorite</mat-icon>Snaps 
+        <mat-icon>favorite</mat-icon>{{facesnap.snaps}}
       </button>
     </mat-card-actions>
   </mat-card>
+
+
   

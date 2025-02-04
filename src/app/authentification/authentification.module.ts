@@ -7,6 +7,7 @@ import { InscriptionComponent } from './components/inscription/inscription.compo
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     LoginComponent,

@@ -9,7 +9,12 @@
         <input matInput  type="password" formControlName = "password"/>
       </mat-form-field>
     
-      <button mat-raised-button color="primary" type="submit" (click) = "onLogin()">
+      <button mat-raised-button color="primary" type="submit" (click) = "onLogin()" class="b1">
         Se connecter
       </button>
+        Pas de compte ? 
+        <button mat-raised-button color="primary" type="submit" routerLink = "/auth/signup">
+          S'inscrire
+        </button>
+      
 </form>

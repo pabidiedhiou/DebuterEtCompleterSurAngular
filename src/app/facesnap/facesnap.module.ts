@@ -19,6 +19,6 @@ import { MaterialModule } from '../material/material.module';
     CommonModule,
     FacesnapRoutingModule,
     MaterialModule,
-  ]
+  ],
 })
 export class FacesnapModule { }
