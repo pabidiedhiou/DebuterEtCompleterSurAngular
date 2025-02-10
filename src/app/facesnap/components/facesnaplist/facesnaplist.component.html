@@ -4,11 +4,8 @@
       <mat-card-title> {{facesnap.title}} </mat-card-title>
       <mat-card-subtitle>{{facesnap.location}} </mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content>
-      <p>{{facesnap.description}}</p>
-    </mat-card-content>
     <mat-card-actions align="end">
-      <button mat-icon-button color="primary">
+      <button mat-icon-button color="primary" (click) = "voirSnapParId()">
         <mat-icon> {{facesnap.snaps}}</mat-icon>Voir
       </button>
     </mat-card-actions>

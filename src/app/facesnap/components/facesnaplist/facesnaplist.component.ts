@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FaceSnap } from 'src/app/core/models/facesnap.models';
 @Component({
@@ -7,9 +8,13 @@ import { FaceSnap } from 'src/app/core/models/facesnap.models';
   styleUrls: ['./facesnaplist.component.scss']
 })
 export class FacesnaplistComponent implements OnInit {
-constructor(){}
+constructor(private router : Router){}
 @Input() facesnap!: FaceSnap
 ngOnInit(): void {
 
+}
+
+voirSnapParId(){
+  this.router.navigateByUrl(`facesnap/${this.facesnap._id}`)
 }
 }

@@ -16,6 +16,6 @@ export class SinglefacesnapComponent implements OnInit {
     const id = this.route.snapshot.params['id']
     console.log(`id = ${id} ; et son type est : ${typeof(id)}`)
     this.facesnap$ = this.facesnapService.getOneFaceSnap(id)
-    this.facesnap$.subscribe((data) => console.log(data.description))
+    this.facesnap$.subscribe((data) => console.log(data))
   }
 }

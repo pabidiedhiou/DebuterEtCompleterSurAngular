@@ -1,1 +1,44 @@
-<p>nouveaufacesnap works!</p>
+<div class="face-snap-form-container">
+    <mat-card class="form-card">
+      <mat-card-title>Créer un FaceSnap</mat-card-title>
+      <mat-card-content>
+        <form>
+          <!-- Titre -->
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Titre</mat-label>
+            <input matInput placeholder="Titre du FaceSnap" name="title" />
+          </mat-form-field>
+  
+          <!-- Description -->
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Description</mat-label>
+            <textarea
+              matInput
+              placeholder="Description du FaceSnap"
+              rows="3"
+              name="description"
+            ></textarea>
+          </mat-form-field>
+  
+          <!-- URL de l'image -->
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>URL de l'image</mat-label>
+            <input matInput placeholder="http://example.com/image.jpg" name="imageUrl" />
+          </mat-form-field>
+  
+          <!-- Lieu -->
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Lieu</mat-label>
+            <input matInput placeholder="Lieu du FaceSnap" name="location" />
+          </mat-form-field>
+  
+          <!-- Bouton de soumission -->
+          <div class="form-actions">
+            <button mat-raised-button color="primary" type="submit">Créer</button>
+            <button mat-stroked-button color="warn" type="reset">Annuler</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
