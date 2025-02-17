@@ -2,7 +2,7 @@
     <mat-card class="form-card">
       <mat-card-title>Créer un FaceSnap</mat-card-title>
       <mat-card-content>
-        <form>
+        <form method="post" enctype="multipart/form-data">
           <!-- Titre -->
           <mat-form-field appearance="fill" class="form-field">
             <mat-label>Titre</mat-label>
@@ -23,7 +23,7 @@
           <!-- URL de l'image -->
           <mat-form-field appearance="fill" class="form-field">
             <mat-label>URL de l'image</mat-label>
-            <input matInput placeholder="http://example.com/image.jpg" name="imageUrl" />
+            <input matInput placeholder="http://example.com/image.jpg" name="image" />
           </mat-form-field>
   
           <!-- Lieu -->
