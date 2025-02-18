@@ -13,7 +13,8 @@ export class NouveaufacesnapComponent implements OnInit {
   constructor(private formBuilder : FormBuilder, private facesnapservice : FacesnapsService){}
 
   formulaire!: FormGroup
-  snapform$!: Observable<FaceSnap>
+  image!: any
+  facesnap!: FaceSnap
 
   ngOnInit(): void {
     this.formulaire = this.formBuilder.group({
@@ -23,24 +24,35 @@ export class NouveaufacesnapComponent implements OnInit {
       location: [null]
     })
 
-    this.snapform$ = this.formulaire.valueChanges.pipe(
-      map((valeursFormulaire) =>({
-        ...valeursFormulaire,
-        _id : 10,
-        snaps : 10,
-        userId : 10,
-        createdDate : new Date(),
+  }
 
-      }))
-    )
+  onSelect(event : any){
+    if (event.target.files.length > 0) {
+      this.image = event.target.files[0]
+      this.formulaire.get('imageUrl')?.setValue(this.image)
+    }
   }
 
   onCreer(){
-    //console.log(this.formulaire.value)
+    this.facesnap = this.formulaire.value;
+    this.facesnap._id = 10;
+    this.facesnap.userId = 10;
+    this.facesnap.createdDate = new Date();
+    this.facesnap.snaps  = 10;
 
-    this.snapform$.subscribe((facesnap) => {
-      this.facesnapservice.createFaceSnap(facesnap).subscribe((response) => {console.log(response)})
-    })
+    const formData = new FormData();
+    formData.append('id', `${this.facesnap._id}`);
+    formData.append('userId', `${this.facesnap.userId}`);
+    formData.append('createdDate', `${this.facesnap.createdDate}`);
+    formData.append('snaps', `${this.facesnap.snaps}`);
+    formData.append('image', `${this.facesnap.imageUrl}`);
+    formData.append('location', `${this.facesnap.location}`);
+    formData.append('description', `${this.facesnap.description}`);
+    formData.append('title', `${this.facesnap.title}`);
+
+    this.facesnapservice.createFaceSnap(formData).subscribe((data) => {console.log(data)})
+
+    console.log(this.facesnap)
   }
 
 }
