@@ -14,8 +14,8 @@ export class FacesnapsService {
     return this.http.get<FaceSnap[]>(`${environment.apiUrl}/stuff`)
   }
 
-  createFaceSnap(facesnap: FaceSnap){
-    this.http.post<string>(`${environment.apiUrl}/stuff`, facesnap)
+  createFaceSnap(facesnap: FaceSnap): Observable<string>{
+    return this.http.post<string>(`${environment.apiUrl}/stuff`, facesnap)
   }
 
   getOneFaceSnap(id : string): Observable<FaceSnap>{
