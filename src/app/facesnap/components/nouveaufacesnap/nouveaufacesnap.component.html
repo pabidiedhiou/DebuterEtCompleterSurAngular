@@ -2,11 +2,11 @@
     <mat-card class="form-card">
       <mat-card-title>Créer un FaceSnap</mat-card-title>
       <mat-card-content>
-        <form method="post" enctype="multipart/form-data">
+        <form [formGroup]="formulaire">
           <!-- Titre -->
           <mat-form-field appearance="fill" class="form-field">
             <mat-label>Titre</mat-label>
-            <input matInput placeholder="Titre du FaceSnap" name="title" />
+            <input matInput placeholder="Titre du FaceSnap" formControlName = "title"/>
           </mat-form-field>
   
           <!-- Description -->
@@ -16,25 +16,31 @@
               matInput
               placeholder="Description du FaceSnap"
               rows="3"
-              name="description"
+              formControlName = "description"
             ></textarea>
           </mat-form-field>
   
-          <!-- URL de l'image -->
-          <mat-form-field appearance="fill" class="form-field">
-            <mat-label>URL de l'image</mat-label>
-            <input matInput placeholder="http://example.com/image.jpg" name="image" />
-          </mat-form-field>
+          <!-- Sélection de l'image -->
+          <div class="form-field">
+            <label for="imageUpload">Image :</label>
+            <input
+              type="file"
+              accept="image/*"
+              id="imageUpload"
+              formControlName = "imageUrl"
+              
+            />
+          </div>
   
           <!-- Lieu -->
           <mat-form-field appearance="fill" class="form-field">
             <mat-label>Lieu</mat-label>
-            <input matInput placeholder="Lieu du FaceSnap" name="location" />
+            <input matInput placeholder="Lieu du FaceSnap" formControlName="location" />
           </mat-form-field>
   
           <!-- Bouton de soumission -->
           <div class="form-actions">
-            <button mat-raised-button color="primary" type="submit">Créer</button>
+            <button mat-raised-button color="primary" type="submit" (click) = "onCreer()">Créer</button>
             <button mat-stroked-button color="warn" type="reset">Annuler</button>
           </div>
         </form>
