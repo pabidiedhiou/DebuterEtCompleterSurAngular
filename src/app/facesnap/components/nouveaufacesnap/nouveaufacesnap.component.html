@@ -2,7 +2,7 @@
     <mat-card class="form-card">
       <mat-card-title>Créer un FaceSnap</mat-card-title>
       <mat-card-content>
-        <form [formGroup]="formulaire">
+        <form [formGroup]="formulaire" (ngSubmit)="onCreer()">
           <!-- Titre -->
           <mat-form-field appearance="fill" class="form-field">
             <mat-label>Titre</mat-label>
@@ -27,7 +27,7 @@
               type="file"
               accept="image/*"
               id="imageUpload"
-              formControlName = "imageUrl"
+              name = "imageUrl"
               (change)="onSelect($event)"
             />
           </div>
@@ -40,7 +40,7 @@
   
           <!-- Bouton de soumission -->
           <div class="form-actions">
-            <button mat-raised-button color="primary" type="submit" (click) = "onCreer()">Créer</button>
+            <button mat-raised-button color="primary" type="submit">Créer</button>
             <button mat-stroked-button color="warn" type="reset">Annuler</button>
           </div>
         </form>

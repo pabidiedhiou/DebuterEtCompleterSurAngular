@@ -1,6 +1,6 @@
 .post-card {
     max-width: 700px;
-    margin: auto;
+    margin: 20px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     //overflow: hidden;
@@ -31,10 +31,17 @@
       gap: 5px;
     }
   
-    img {
+   /* img {
       height: 200px;
       object-fit: cover;
       width: 100%;
+    }*/
+
+    img {
+      width: 100%;        /* L'image s'adapte à la largeur du conteneur */
+      height: 400px;       /* La hauteur suit, préservant le ratio */
+      object-fit: cover;
     }
+    
   }
   
