@@ -8,7 +8,7 @@
       <p>{{facesnap.description}}</p>
     </mat-card-content>
     <mat-card-actions align="end">
-      <button mat-icon-button color="primary">
+      <button mat-icon-button color="primary" [ngStyle]="{color :'rgb(1000, '+facesnap.snaps+ ',0)'}">
         <mat-icon>favorite</mat-icon>{{facesnap.snaps}}
       </button>
     </mat-card-actions>
